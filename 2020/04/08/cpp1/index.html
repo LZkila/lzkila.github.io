@@ -5,15 +5,17 @@
   
 
   
-  <title>cpp1 | Hexo</title>
+  <title>[C++]宏 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="cpp1">
+  <meta name="description" content="使用宏校验值为真不带返回值 123456789#define CM_CHECK_VAL(val) \    if (!(val)) &amp;#123; \        return; \    &amp;#125;void test(int *num) &amp;#123;    CM_CHECK_VAL(num);    cout &lt;&lt; *num &lt;&lt; endl;&amp;#125; 带返回值 12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[C++]宏">
 <meta property="og:url" content="http://yoursite.com/2020/04/08/cpp1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="使用宏校验值为真不带返回值 123456789#define CM_CHECK_VAL(val) \    if (!(val)) &amp;#123; \        return; \    &amp;#125;void test(int *num) &amp;#123;    CM_CHECK_VAL(num);    cout &lt;&lt; *num &lt;&lt; endl;&amp;#125; 带返回值 12">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-07T16:44:45.000Z">
-<meta property="article:modified_time" content="2020-04-07T16:46:10.119Z">
+<meta property="article:modified_time" content="2020-04-07T17:09:21.182Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -79,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      cpp1
+      [C++]宏
     </h1>
   
 
@@ -87,7 +89,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="使用宏校验值为真"><a href="#使用宏校验值为真" class="headerlink" title="使用宏校验值为真"></a>使用宏校验值为真</h4><p>不带返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#define CM_CHECK_VAL(val) \</span><br><span class="line">    if (!(val)) &#123; \</span><br><span class="line">        return; \</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">void test(int *num) &#123;</span><br><span class="line">    CM_CHECK_VAL(num);</span><br><span class="line">    cout &lt;&lt; *num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>带返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#define CM_CHECK_VAL_RET(val, ret) \</span><br><span class="line">    if (!(val)) &#123; \</span><br><span class="line">        return ret; \</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">bool test(int *num) &#123;</span><br><span class="line">    CM_CHECK_VAL(num, false);</span><br><span class="line">    cout &lt;&lt; *num &lt;&lt; endl;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用宏校验枚举在范围内"><a href="#使用宏校验枚举在范围内" class="headerlink" title="使用宏校验枚举在范围内"></a>使用宏校验枚举在范围内</h4>
       
     </div>
     <footer class="article-footer">
@@ -105,7 +111,7 @@
   
     <a href="/2020/04/08/cpp0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">cpp1</div>
+      <div class="article-nav-title">[C++]总结</div>
     </a>
   
 </nav>
@@ -156,11 +162,11 @@
       <ul>
         
           <li>
-            <a href="/2020/04/08/cpp1/">cpp1</a>
+            <a href="/2020/04/08/cpp1/">[C++]宏</a>
           </li>
         
           <li>
-            <a href="/2020/04/08/cpp0/">cpp1</a>
+            <a href="/2020/04/08/cpp0/">[C++]总结</a>
           </li>
         
       </ul>
